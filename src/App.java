@@ -16,6 +16,12 @@ public class App {
         System.out.println("Trem da Direito");
         System.out.println(asn.getRaiz().getFilhoDireito().getValor());
 
+        asn.inserir(6);
+        asn.inserir(14);
+        asn.inserir(1);
 
+        asn.inserir(13);
+        asn.inserir(7);
+        asn.inserir(4);        
     }
 }
