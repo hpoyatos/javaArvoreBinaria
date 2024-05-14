@@ -1,9 +1,9 @@
 ## Diagrama de Classes
-<a href="documentation/images/diagramaDeClasses.png">Clique aqui</a>
+<img src="documentation/images/diagramaDeClasses.png">
 
 
 ## Árvore Binária do Exemplo
-<a href="documentation/images/arvoreBinariaExemplo.png">Clique aqui</a>
+<img src="documentation/images/arvoreBinariaExemplo.png">
 
 ## Getting Started
 
