@@ -24,6 +24,19 @@ public class App {
         asn.inserir(7);
         asn.inserir(4);  
         
+        //Chamando o percorrerPreOrder(No no):void...
         asn.percorrerPreOrdem(asn.getRaiz());
+
+        System.err.println("");
+        //Chamando o percorrerEmOrder(No no):void...
+        asn.percorrerEmOrdem(asn.getRaiz());
+
+        System.err.println("");
+        //Chamando o percorrerPosOrder(No no):void...
+        asn.percorrerPosOrdem(asn.getRaiz());
+        
+        System.err.println("");
+        //Chamando o percorrerEmOrder(No no):void...
+        asn.percorrerEmOrdemDecrescente(asn.getRaiz());
     }
 }
