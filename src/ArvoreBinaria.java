@@ -37,5 +37,13 @@ public class ArvoreBinaria {
         }
     }
 
-
+    // Percorrer : técnica Pré-Ordem : nó-da-vez, filho esquerdo, filho direito..
+    public void percorrerPreOrdem(No no)
+    {
+        if (no != null) {
+            System.out.print(no.getValor() + " ");
+            this.percorrerPreOrdem(no.getFilhoEsquerdo());
+            this.percorrerPreOrdem(no.getFilhoDireito());
+        }
+    }
 }
