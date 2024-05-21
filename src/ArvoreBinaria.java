@@ -76,4 +76,42 @@ public class ArvoreBinaria {
             this.percorrerEmOrdemDecrescente(no.getFilhoEsquerdo());
         }
     }
+
+    // Remover
+    public void remover(int valor) {
+        this.raiz = this.removerRecursivamente(this.raiz, valor);        
+    }
+
+    public No removerRecursivamente(No noDaVez, int valor) {
+        if (noDaVez == null) {
+            return noDaVez;
+        }
+        else
+        {
+            if (valor < noDaVez.getValor()) {
+                noDaVez.setFilhoEsquerdo(removerRecursivamente(noDaVez.getFilhoEsquerdo(), valor));
+            } else if (valor > noDaVez.getValor()) {
+                noDaVez.setFilhoDireito(removerRecursivamente(noDaVez.getFilhoDireito(), valor));
+            } else {
+                if (noDaVez.getFilhoEsquerdo() == null) {
+                    return noDaVez.getFilhoDireito();
+                } else if (noDaVez.getFilhoDireito() == null) {
+                    return noDaVez.getFilhoEsquerdo();
+                }
+                
+                //Localiza o menor número da direita e traz no lugar..
+                noDaVez.setValor(encontrarMinimo(noDaVez.getFilhoDireito()).getValor());
+                noDaVez.setFilhoDireito(removerRecursivamente(noDaVez.getFilhoDireito(), noDaVez.getValor()));
+
+            }
+            return noDaVez;
+        }
+    }
+
+    private No encontrarMinimo(No no) {
+        while (no.getFilhoEsquerdo() != null) {
+            no = no.getFilhoEsquerdo();
+        }
+        return no;
+    }
 }
