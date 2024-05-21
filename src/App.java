@@ -38,5 +38,15 @@ public class App {
         System.err.println("");
         //Chamando o percorrerEmOrder(No no):void...
         asn.percorrerEmOrdemDecrescente(asn.getRaiz());
+
+        
+        System.err.println("");
+
+        //Remover o 1
+        asn.remover(1);
+
+        asn.percorrerPreOrdem(asn.getRaiz());
+
+
     }
 }
